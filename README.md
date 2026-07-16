@@ -29,15 +29,18 @@ PortfolioPilot AI helps students and professionals evaluate their technical port
 
 ### Home Page
 
-![Home](screenshots/home.png)
+![Home](screenshot/homepage.png)
+### input Page
+
+![input](screenshot/input.png)
 
 ### Portfolio Analysis
 
-![Analysis](screenshots/analyzing.png)
+![Analysis](screenshot/analyzing.png)
 
 ### Results & AI Chat
 
-![Result](screenshots/result.png)
+![Result](screenshot/result.png)
 
 ---
 
