@@ -74,4 +74,4 @@ def smry(github_url):
 
 
 
-print(smry("https://github.com/divyanamdev01") )
+
