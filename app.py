@@ -14,6 +14,7 @@ from tools.jd_tool import *
 st.set_page_config(
     page_title="PortfolioPilot AI",
     layout="centered"
+    page_icon="🤖"
 )
 
 
