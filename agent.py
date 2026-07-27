@@ -66,5 +66,4 @@ def run_agent():
         "interview": interview,
         "pdf": pdf
     }
-run_agent()
 
