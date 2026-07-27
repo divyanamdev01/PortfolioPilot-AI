@@ -59,7 +59,7 @@ def total_starts(repositories):
     return total
 
 def best_repo(repositories):
-      if not repositories:
+    if not repositories:
         return None
     return max(repositories, key=lambda repo: repo["stars"])
 
