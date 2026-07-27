@@ -14,7 +14,7 @@ def get_profile(username):
     return {
         "name": data.get("name"),
         "username": data.get("login"),
-        "followers" :data.get("follwers"),
+        "followers": data.get("followers"),
         "public_repos": data.get("public_repos"),
         "bio": data.get("bio"),
         "location": data.get("location")
@@ -55,10 +55,12 @@ def language_count(repositories):
 def total_starts(repositories):
     total = 0
     for repo in repositories:
-        total += repo["stars"]
+        total += repo.get("stars", 0) or 0
     return total
 
 def best_repo(repositories):
+      if not repositories:
+        return None
     return max(repositories, key=lambda repo: repo["stars"])
 
 def smry(github_url):
