@@ -37,7 +37,11 @@ if "chat_history" not in st.session_state:
 
 if "pdf_path" not in st.session_state:
     st.session_state.pdf_path = None
+    
+if "analysis_count" not in st.session_state:
+    st.session_state.analysis_count = 0
 
+MAX_ANALYSES = 2
 # ---------------- Form ----------------
 
 with st.form("portfolio_form"):
@@ -73,8 +77,12 @@ with st.form("portfolio_form"):
 # ---------------- Analyze ----------------
 
 if submitted:
+     # Check usage limit first
+    if st.session_state.analysis_count >= MAX_ANALYSES:
+        st.error("🚫 You have reached the maximum limit of 2 analyses.")
+        st.info("You can only analyze your portfolio 2 times.")
 
-    if not resume:
+    elif not resume:
         st.error("Upload Resume")
 
     elif not linkedin:
@@ -100,6 +108,8 @@ if submitted:
 
         with st.spinner("Analyzing..."):
             result=run_agent()
+             # Count only after successful analysis
+            st.session_state.analysis_count += 1
             st.session_state.report = result
             st.session_state.pdf_path = result.get("pdf")
 
