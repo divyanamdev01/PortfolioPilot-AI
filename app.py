@@ -16,20 +16,7 @@ st.set_page_config(
     layout="centered"
 )
 
-st.markdown("""
-<style>
-.footer {
-    text-align: center;
-    color: gray;
-    font-size: 14px;
-    padding: 20px;
-}
-</style>
 
-<div class="footer">
-    © 2026 PortfolioPilot AI | Built by Divya Namdev
-</div>
-""", unsafe_allow_html=True)
 
 
 st.title("🤖 AI Portfolio Analyzer")
